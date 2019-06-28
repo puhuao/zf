@@ -1,0 +1,110 @@
+<!--pages/input/input.wxml-->
+<view class='page'>
+  <view class="iconusecont-div {{state==index?'active-tag':''}}" bindtap="select_use" wx:for="{{use}}" data-key='{{index}}'>
+    <view class="flex-item">
+      <rich-text class='use_name'>{{item.use_name}}</rich-text>
+    </view>
+  </view>
+  <view>
+    <view class="widgets__list {{state==0 ? 'widgets__list_show' : ''}}">
+      <view class="widgets_input">
+        <view>物业名称：</view>
+        <input placeholder="请输入小区名称" auto-focus/>
+      </view>
+
+      <view class="widgets_input">
+        <view>租金：</view>
+        <input placeholder="请输入房屋总价" auto-focus/>
+      </view>
+
+      <view class="widgets_input">
+        <view>房屋面积：</view>
+        <input placeholder="请输入建筑面积" auto-focus/>
+      </view>
+
+      <view class="widgets_input">
+        <view>房屋户型：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>装修情况：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>所在楼层：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>建筑年代：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      
+      <view class="widgets_input">
+        <view>其他说明：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>经纪人（姓名/电话）：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>房源编号：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+    </view>
+    <view class="widgets__list {{state==1 ? 'widgets__list_show' : ''}}">
+       <view class="widgets_input">
+        <view>小区名称：</view>
+        <input placeholder="请输入小区名称" auto-focus/>
+      </view>
+
+      <view class="widgets_input">
+        <view>房屋总价：</view>
+        <input placeholder="请输入房屋总价" auto-focus/>
+      </view>
+
+      <view class="widgets_input">
+        <view>建筑面积：</view>
+        <input placeholder="请输入建筑面积" auto-focus/>
+      </view>
+
+      <view class="widgets_input">
+        <view>房屋单价：</view>
+        <input placeholder="请输入房屋单价" auto-focus/>
+       
+      </view>
+      <view class="widgets_input">
+        <view>房屋户型：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>装修情况：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>所在楼层：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>建筑年代：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>产权年限：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>其他说明：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>经纪人（姓名/电话）：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+      <view class="widgets_input">
+        <view>房源编号：</view>
+        <input placeholder="请输入房屋户型" auto-focus/>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/photo/photo.wxml-->
+
+<text bindtap="bindViewTap">input</text>
+

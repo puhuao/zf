@@ -1,0 +1,44 @@
+/* pages/input/input.wxss */
+.iconusecont-div {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.flex-item {
+  display: inline-block;
+  width: 173rpx;
+  height: 78rpx;
+  font-size: 26rpx;
+  border: 2rpx solid #999;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #000;
+  cursor: pointer;
+  line-height: 30rpx;
+}
+
+.use_name {
+  font-size: 34rpx;
+  line-height: 79rpx;
+}
+
+.active-tag .flex-item {
+  background: #03e2ff;
+  color: #fff;
+  border: 1rpx solid #fff;
+}
+.widgets__list{
+    display: none;
+}
+.widgets__list_show{
+    display: block;
+}
+.widgets_input{
+    display: flex;
+    padding: 20px;
+    font-size: 34rpx;
+    background: #fff;
+    margin-top: 1rpx;
+}
