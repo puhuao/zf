@@ -4,6 +4,9 @@
   flex-direction: column;
   align-items: center;
 }
+.image {
+  border-radius: 8px;
+}
 
 .userinfo-avatar {
   width: 128rpx;
