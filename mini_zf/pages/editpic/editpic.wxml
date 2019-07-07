@@ -1,7 +1,7 @@
 <!--pages/editpic/editpic.wxml-->
-<view class='image_container'>
-<image src="{{shareImage}}" class="share-image"></image>
+<view class='page'>
+  
+  <view class='image_container'>
+    <image src="add_logo.png" class="share-image"></image>
+  </view>
 </view>
-
-
- 

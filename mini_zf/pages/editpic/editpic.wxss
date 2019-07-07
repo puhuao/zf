@@ -3,20 +3,25 @@
 page {
   background-color: #dcec4c;
   height: 100%;
-  widows: 100%;
+  width: 100%;
+ 
 }
 
 .image_container {
-  width: 100%;
-  height: 100%;
+  margin: 0 75rpx;
+  width: 648rpx;
+  height: 918rpx;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  margin-top: 20rpx;
+  border: 1px solid black;
+  position: relative;
 }
 
 .share-image {
-  width: 648rpx;
-  height: 918rpx;
-  border: 1px solid black;
+  height: 45rpx;
+  width: 45rpx;
+  left: 25rpx;
+  top: 5rpx;
+  position: absolute
 }
