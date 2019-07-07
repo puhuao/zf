@@ -1,0 +1,22 @@
+/* pages/editpic/editpic.wxss */
+
+page {
+  background-color: #dcec4c;
+  height: 100%;
+  widows: 100%;
+}
+
+.image_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.share-image {
+  width: 648rpx;
+  height: 918rpx;
+  border: 1px solid black;
+}

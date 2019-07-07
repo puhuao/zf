@@ -33,6 +33,37 @@ App({
       }
     })
   },
+  data: {
+    sale:{
+      name: '',
+      size: '',
+      mony:'',
+      monyPer: '',
+      type: '',
+      situation: '',
+      floor: '',
+      age: '',
+      extra: '',
+      namePhone: '',
+      sort: '',
+      propertyYears: ''
+    },
+    rent:{
+      name: '',
+      size: '',
+      rentMony: '',
+      type: '',
+      situation: '',
+      floor: '',
+      age: '',
+      extra: '',
+      namePhone: '',
+      sort: '',
+      propertyYears: ''
+    },
+    images: [],
+    state:''
+  },
   globalData: {
     userInfo: null
   }
