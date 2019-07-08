@@ -1,6 +1,6 @@
 /**app.wxss**/
 page {
-  background-color: #dcec4c;
+  background-color: #fff;
   height: 100%;
   widows: 100%;
 }

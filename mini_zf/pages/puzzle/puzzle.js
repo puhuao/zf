@@ -1,14 +1,9 @@
 const Puzzle = require("./h5puzzle.js");
-const uilt = require('../../utils/util.js');
 Page({
   data: {
     imgPoints: [],
     imgArr: [
-      'https://rattenking.gitee.io/stone/images/wx/images/quanyecha.jpg', 
-      'https://rattenking.gitee.io/stone/images/wx/images/haidao.jpg', 
-      'https://rattenking.gitee.io/stone/images/wx/images/mingren1.jpg', 
-      'https://rattenking.gitee.io/stone/images/wx/images/qilongzhu1.jpg',
-      'https://rattenking.gitee.io/stone/images/wx/images/quanye.jpg'
+      'https://rattenking.gitee.io/stone/images/wx/images/quanyecha.jpg'
     ],
     imgUrl: 'https://rattenking.gitee.io/stone/images/wx/images/quanyecha.jpg',
     levelArr: [
@@ -16,25 +11,9 @@ Page({
         id: 2,
         text: '弱智'
       },
-      {
-        id: 3,
-        text: '简单'
-      },
-      {
-        id: 4,
-        text: '普通'
-      },
-      {
-        id: 5,
-        text: '困难'
-      },
-      {
-        id: 6,
-        text: '变态'
-      }
     ],
-    WIDTH: 0,
-    HEIGHT: 0,
+    WIDTH: 648,
+    HEIGHT: 918,
     width: 0,
     height: 0,
     status: false,
@@ -43,11 +22,10 @@ Page({
     currentY: 0,
     currentPX: 0,
     currentPY: 0,
-    type0: 4
+    type0: 2
   },
   onReady(){
-    let _this = this;
-    
+    let _this = this;  
     new Puzzle(this);
   },
   getType(e){

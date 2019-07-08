@@ -7,10 +7,6 @@
     <view class='tui-puzzle-choose' style="height:{{HEIGHT}}px;width:{{WIDTH}}px;position:relative;float:left;background:url('https://rattenking.gitee.io/stone/images/wx/images/puzzle-bg.jpg') no-repeat  0px 0px/{{WIDTH}}px {{HEIGHT}}px;">
       <text class='tui-puzzle-choose-name'>选择关卡</text>
       <view class='tui-puzzle-btn' wx:key="typekey" data-type="{{item.id}}" bindtap='getType' wx:for="{{levelArr}}">{{item.text}}</view>
-      <!-- 子页面广告位 -->
-      <view style="margin:4vw 0 150px;width:100vw;">
-        <include src="../../template/pagead.wxml"/>
-      </view>
     </view>
     <!--选择图片  -->
     <view class='tui-puzzle-choose' style="height:{{HEIGHT}}px;width:{{WIDTH}}px;position:relative;float:left;background:url('https://rattenking.gitee.io/stone/images/wx/images/puzzle-bg.jpg') no-repeat  0px 0px/{{WIDTH}}px {{HEIGHT}}px;box-sizing:border-box;padding:20px;">

@@ -141,28 +141,7 @@ class Puzzle {
       _this.currentX = 0;
       _this.currentY = 0;
       
-      if(_this.checkWin()){
-        let text = '恭喜您，您已成为' + page.data.levelArr[_this.type - 2].text + '的人！是否继续闯关？';
-        wx.showModal({
-          title: '过关提醒',
-          content: text,
-          success(res) {
-            if (res.confirm){
-              _this.type++;
-              _this.init();
-            } else if (res.cancel){
-              wx.showToast({
-                title: '您将永远成为一个' + page.data.levelArr[_this.type - 2].text,
-                success(){
-                  wx.navigateBack({
-                    delta: 1
-                  })
-                }
-              })
-            }
-          }
-        })
-      };
+
     }
   }
 }
