@@ -19,9 +19,9 @@ page {
 }
 
 .share-image {
-  height: 45rpx;
-  width: 45rpx;
+  height: 144rpx;
+  width: 144rpx;
   left: 25rpx;
-  top: 5rpx;
+  top: 18rpx;
   position: absolute
 }

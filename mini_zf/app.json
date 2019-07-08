@@ -4,8 +4,9 @@
     "pages/logs/logs",
     "pages/photo/photo",
     "pages/input/input",
-    "pages/editpic/editpic"
-  ],
+    "pages/editpic/editpic",
+    "pages/puzzle/puzzle"
+    ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
