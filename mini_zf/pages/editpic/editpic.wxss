@@ -25,3 +25,9 @@ page {
   top: 18rpx;
   position: absolute
 }
+.images{
+  width: 570rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}

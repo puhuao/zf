@@ -3,5 +3,10 @@
   
   <view class='image_container'>
     <image src="add_logo.png" class="share-image"></image>
+
+    <view class='images'>
+    <image src="{{images[0]}}"></image>
+    </view>
+
   </view>
 </view>
