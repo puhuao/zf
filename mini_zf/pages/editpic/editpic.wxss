@@ -1,10 +1,8 @@
 /* pages/editpic/editpic.wxss */
 
 page {
-  background-color: #dcec4c;
   height: 100%;
   width: 100%;
- 
 }
 
 .image_container {
@@ -12,8 +10,7 @@ page {
   width: 648rpx;
   height: 918rpx;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  flex-direction: column;
   border: 1px solid black;
   position: relative;
 }
@@ -21,13 +18,84 @@ page {
 .share-image {
   height: 144rpx;
   width: 144rpx;
-  left: 25rpx;
-  top: 18rpx;
-  position: absolute
+  margin-left: 25rpx;
+  margin-top: 18rpx;
 }
-.images{
-  width: 570rpx;
-  height: 500rpx;
+
+.area_name {
+  width: 480rpx;
+  height: 56rpx;
+  margin-left: 84rpx;
+  margin-top: 22rpx;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  background: gray;
+}
+
+.name {
+  display: inline-block;
+  font-size: 26rpx;
+  text-align: center;
+  color: red;
+  cursor: pointer;
+  line-height: 30rpx;
+  margin-left: 12rpx;
+}
+
+.mony {
+  display: inline-block;
+  font-size: 42rpx;
+  text-align: center;
+  color: red;
+  cursor: pointer;
+  line-height: 30rpx;
+}
+
+.images {
+  width: 480rpx;
+  height: 434rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 84rpx;
+  background: green;
+}
+
+.big_image {
+  width: 480rpx;
+  height: 274rpx;
+}
+
+.small_image_container {
+  width: 480rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.four_image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.des_container {
+  width: 480rpx;
+  height: 142rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 84rpx;
+  margin-top: 12rpx
+}
+
+.des {
+  width: 120rpx;
+  height: 71rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.des_half {
+  width: 480rpx;
+  height: 71rpx;
+  display: flex;
+  flex-direction: row;
 }

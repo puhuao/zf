@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/editpic/editpic",
     "pages/index/index",
     "pages/logs/logs",
     "pages/photo/photo",
     "pages/input/input",
-    "pages/editpic/editpic",
+    
     "pages/puzzle/puzzle",
     "pages/drag/drag"
   ],

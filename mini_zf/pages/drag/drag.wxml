@@ -2,11 +2,13 @@
 <!-- //顶部输入框 类似微信朋友圈 --> 
   <movable-area class='clearfix'>
   <!-- //tempFilePaths是我上传base64后，后台传回来的图片数组 -->
+
     <block wx:for="{{tempFilePaths}}">
       <view class='pic_box item' id="{{index}}" data-index='{{index}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm'  data-img='{{item}}'>
       <!-- //这里为什么要用data-list，因为九宫格，单张点击图片放大后，实现了左右滑动切换大图 -->
         <image src="{{item}}" class='gays_pic_C' mode="widthFix" 
         data-id="{{index}}"  data-src="{{item}}" wx:for-item="item" bindtap='previewImage'/>
+        
         <!-- //关闭按钮 一个小× -->
         <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555150376536&di=89eab3ac6a9312c076346dbbfadc7c5b&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic2%2Fcover%2F00%2F40%2F75%2F5813316b20219_610.jpg" class="del_pic" bindtap='deletePic' data-id="{{index}}"></image>
       </view>

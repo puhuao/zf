@@ -1,12 +1,46 @@
 <!--pages/editpic/editpic.wxml-->
 <view class='page'>
-  
   <view class='image_container'>
     <image src="add_logo.png" class="share-image"></image>
-
-    <view class='images'>
-    <image src="{{images[0]}}"></image>
+    <view class='area_name'>
+      <text class='name'>庄海国际</text>
+      <text>售</text>
+      <text class='mony'>1000</text>
     </view>
+    <view class='images'>
+      <image class='big_image' src="{{images[0]}}"></image>
+      <view class='small_image_container'>
+        <image class='four_image' src="{{images[1]}}"></image>
+        <image class='four_image' src="{{images[2]}}"></image>
+        <image class='four_image' src="{{images[3]}}"></image>
+      </view>
+    </view>
+    <view class='des_container'>
+      <view class='des_half'>
+        <view class='des'>
+          <text class='name'>户型</text>
+          <text class='name'>三室两厅</text>
+        </view>
+        <view class='des'>
+          <text class='name'>面积</text>
+          <text class='name'>142</text>
+        </view>
+        <view class='des'>
+          <text class='name'>楼层</text>
+          <text class='name'>19</text>
+        </view>
+        <view class='des'>
+          <text class='name'>装修</text>
+          <text class='name'>精装</text>
+        </view>
+      </view>
+      <view class='des_half'>
+        <view class='des'>
+          <text class='name'>其他说明：</text>
+          <text class='name'>三室两厅</text>
+        </view>
+      </view>
 
+    </view>
   </view>
 </view>
