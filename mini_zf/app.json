@@ -5,9 +5,9 @@
     "pages/logs/logs",
     "pages/photo/photo",
     "pages/input/input",
-    
     "pages/puzzle/puzzle",
-    "pages/drag/drag"
+    "pages/drag/drag",
+    "pages/save/save"
   ],
   "window": {
     "backgroundTextStyle": "light",

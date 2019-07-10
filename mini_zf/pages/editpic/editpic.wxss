@@ -99,3 +99,9 @@ page {
   display: flex;
   flex-direction: row;
 }
+.tag{
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 25rpx;
+  margin-bottom: 25rpx
+}

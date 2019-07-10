@@ -42,5 +42,6 @@
       </view>
 
     </view>
+    <image src="add_logo.png" class="tag"></image>
   </view>
 </view>
