@@ -1,7 +1,7 @@
 <!--pages/editpic/editpic.wxml-->
 <view class='page'>
   <view class='image_container'>
-  <image src="add_logo.png" class="tag"></image>
+    <image src="add_logo.png" class="tag"></image>
     <image src="add_logo.png" class="share-image"></image>
     <view class='area_name'>
       <text class='name'>庄海国际</text>
@@ -15,11 +15,6 @@
         <image class='four_image' src="{{images[2]}}"></image>
         <image class='four_image' src="{{images[3]}}"></image>
       </view>
-      <movable-view x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
-      <view class='item-move' hidden='{{hidden}}'>
-        <image src="{{maskImg}}" mode="widthFix"></image>
-      </view>
-    </movable-view>
     </view>
     <view class='des_container'>
       <view class='des_half'>
@@ -48,12 +43,12 @@
       </view>
 
     </view>
-    
+
   </view>
   <view class='button_area'>
-  <button bindtap="chooseimage">照片切换</button>
-<button bindtap="chooseimage">页面切换</button>
+    <button bindtap="chooseimage">照片切换</button>
+    <button bindtap="chooseimage">页面切换</button>
   </view>
 
-<button style="margin:30rpx;" bindtap="chooseimage">保存为图片</button>
+  <button style="margin:30rpx;" bindtap="chooseimage">保存为图片</button>
 </view>

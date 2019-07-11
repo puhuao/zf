@@ -1,0 +1,37 @@
+<view class="release_box">
+  <!-- //顶部输入框 类似微信朋友圈 -->
+
+  <view class='contentWarp'>
+        <!-- *************操作区域*************  -->
+        <block wx:for="{{itemList}}" wx:key="{{item.id}}">
+            <!-- 圆心坐标 <text style='position:absolute;top:{{item.y}}px;left:{{item.x}}px;width:2px;height:2px;background-color:yellow;z-index:500'></text> -->
+            <view class='touchWrap' style='transform: scale({{item.scale}});top:{{item.top}}px;left:{{item.left}}px; '>
+                <view class='imgWrap {{item.active? "touchActive":""}}' style="transform: rotate({{item.angle}}deg); border: {{item.active?4*item.oScale:0}}rpx #fff dashed;">
+                    <image src='{{item.image}}' data-id='{{item.id}}' style='width:{{item.width}}px;height:{{item.height}}px;' bindtouchstart='WraptouchStart'  bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
+                    
+                    
+                </view>
+            </view>
+        </block>
+        <!-- **************操作区域************  -->
+</view>
+  <movable-area class='image_container'>
+    <!-- //tempFilePaths是我上传base64后，后台传回来的图片数组 -->
+    <view class='images'>
+      <image class='big_image' src="{{images[0]}}" id="{{0}}" data-index='{{0}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm' data-img='{{images[0]}}'></image>
+      <view class='small_image_container'>
+        <image class='four_image' src="{{images[1]}}" id="{{1}}" data-index='{{1}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm' data-img='{{images[1]}}'></image>
+        <image class='four_image' src="{{images[2]}}" id="{{2}}" data-index='{{2}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm' data-img='{{images[2]}}'></image>
+        <image class='four_image' src="{{images[3]}}" id="{{3}}" data-index='{{3}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm' data-img='{{images[3]}}'></image>
+      </view>
+    </view>
+ <!-- //把长按图片时候的图片路径 传过来 -->
+    <movable-area x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
+      <view class='item-move' hidden='{{hidden}}'>
+        <image src="{{maskImg}}" mode="widthFix"></image>
+      </view>
+    </movable-area>
+  </movable-area>
+
+
+</view>
