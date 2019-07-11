@@ -1,10 +1,11 @@
 <!--pages/editpic/editpic.wxml-->
 <view class='page'>
   <view class='image_container'>
+  <image src="add_logo.png" class="tag"></image>
     <image src="add_logo.png" class="share-image"></image>
     <view class='area_name'>
       <text class='name'>庄海国际</text>
-      <text>售</text>
+      <text class='name_tag'>售</text>
       <text class='mony'>1000</text>
     </view>
     <view class='images'>
@@ -14,6 +15,11 @@
         <image class='four_image' src="{{images[2]}}"></image>
         <image class='four_image' src="{{images[3]}}"></image>
       </view>
+      <movable-view x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
+      <view class='item-move' hidden='{{hidden}}'>
+        <image src="{{maskImg}}" mode="widthFix"></image>
+      </view>
+    </movable-view>
     </view>
     <view class='des_container'>
       <view class='des_half'>
@@ -35,13 +41,19 @@
         </view>
       </view>
       <view class='des_half'>
-        <view class='des'>
+        <view class='des_v'>
           <text class='name'>其他说明：</text>
           <text class='name'>三室两厅</text>
         </view>
       </view>
 
     </view>
-    <image src="add_logo.png" class="tag"></image>
+    
   </view>
+  <view class='button_area'>
+  <button bindtap="chooseimage">照片切换</button>
+<button bindtap="chooseimage">页面切换</button>
+  </view>
+
+<button style="margin:30rpx;" bindtap="chooseimage">保存为图片</button>
 </view>

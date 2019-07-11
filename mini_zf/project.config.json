@@ -44,7 +44,7 @@
 				{
 					"id": -1,
 					"name": "启动",
-					"pathName": "pages/index/index",
+					"pathName": "pages/editpic/editpic",
 					"scene": null
 				}
 			]
