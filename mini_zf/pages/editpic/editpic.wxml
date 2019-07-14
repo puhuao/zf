@@ -9,11 +9,29 @@
       <text class='mony'>1000</text>
     </view>
     <view class='images'>
-      <image class='big_image' src="{{images[0]}}"></image>
+      <view class='touchWrap' style='transform: scale({{itemList[0].scale}});top:0px;left:0}px; '>
+        <view class='imgWrap {{itemList[0].active? "touchActive":""}}' style="border: {{itemList[0].active?4:0}}rpx #fff dashed;">
+          <image class='big_image' src="{{itemList[0].image}}" data-id='{{itemList[0].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
+        </view>
+      </view>
       <view class='small_image_container'>
-        <image class='four_image' src="{{images[1]}}"></image>
-        <image class='four_image' src="{{images[2]}}"></image>
-        <image class='four_image' src="{{images[3]}}"></image>
+        <view class='touchWrap' style='transform: scale({{itemList[1].scale}});top:0rpx;left:0rpx; '>
+          <view class='imgWrap {{itemList[1].active? "touchActive":""}}' style="border: {{itemList[1].active?4:0}}rpx #fff dashed;">
+            <image class='four_image' src="{{itemList[1].image}}" data-id='{{itemList[1].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
+          </view>
+        </view>
+
+        <view class='touchWrap' style='transform: scale({{itemList[2].scale}});top:0rpx;left:160rpx; '>
+          <view class='imgWrap {{itemList[2].active? "touchActive":""}}' style="border: {{itemList[2].active?4:0}}rpx #fff dashed;">
+            <image class='four_image' src="{{itemList[2].image}}" data-id='{{itemList[2].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
+          </view>
+        </view>
+
+        <view class='touchWrap' style='transform: scale({{itemList[3].scale}});top:0rpx;left:320rpx; '>
+          <view class='imgWrap {{itemList[3].active? "touchActive":""}}' style="border: {{itemList[3].active?4:0}}rpx #fff dashed;">
+            <image class='four_image' src="{{itemList[3].image}}" data-id='{{itemList[3].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
+          </view>
+        </view>
       </view>
     </view>
     <view class='des_container'>

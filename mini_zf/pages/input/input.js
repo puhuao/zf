@@ -13,7 +13,7 @@ Page({
   },
   bindViewTap: function () {
     wx.navigateTo({
-      url: '../nd/nd'
+      url: '../editpic/editpic'
     })
   },
   //选择用途后加样式

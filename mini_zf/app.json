@@ -13,10 +13,10 @@
     
   ],
   "subpackages": [
-    {
-      "root": "images1",
-      "pages": []
-    },
+   {
+    "root": "images1",
+    "pages": []
+  },
     {
       "root": "images2",
       "pages": []

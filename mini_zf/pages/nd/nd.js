@@ -16,10 +16,10 @@ Page({
   onLoad: function(options) {
     items = this.data.itemList;
     this.setDropItem({
-      url: '/images/1.png'
+      url: '/images1/0551房产.png'
     });
     this.setDropItem({
-      url: '/images/1.png'
+      url: '/images1/Q房网.png'
     });
   },
   setDropItem(imgData) {

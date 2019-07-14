@@ -134,3 +134,26 @@ page {
   margin-top: 12rpx;
   flex-direction: row;
 }
+
+.touchWrap{
+    transform-origin: center;
+    z-index: 100;
+}
+
+.imgWrap {
+    box-sizing: border-box;
+    transform-origin: center;
+    float: left;
+    border: 5rpx transparent dashed;
+}
+.imgWrap image {
+    float: left;
+}
+.touchActive .x {
+    display: block;
+}
+
+.touchActive .o {
+    display: block;
+}
+
