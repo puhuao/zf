@@ -1,4 +1,4 @@
-
+var app = getApp()
 Page({
   data: {
     painting: {},
@@ -20,7 +20,7 @@ Page({
         views: [
           {
             type: 'image',
-            url: '/images/background.jpeg',
+            url: app.data.images[0],
             top: 0,
             left: 0,
             width: 375,
@@ -28,7 +28,7 @@ Page({
           },
           {
             type: 'image',
-            url: '/images/avatar.jpeg',
+            url: app.data.images[1],
             top: 27.5,
             left: 29,
             width: 55,
@@ -36,7 +36,7 @@ Page({
           },
           {
             type: 'image',
-            url: '/images/avatar_cover.jpeg',
+            url: app.data.images[2],
             top: 27.5,
             left: 29,
             width: 55,
@@ -63,7 +63,7 @@ Page({
           },
           {
             type: 'image',
-            url: '/images/pic.jpeg',
+            url: app.data.images[3],
             top: 136,
             left: 42.5,
             width: 290,
@@ -71,7 +71,7 @@ Page({
           },
           {
             type: 'image',
-            url: '/images/avatar_cover.jpeg',
+            url: app.data.images[0],
             top: 443,
             left: 85,
             width: 68,

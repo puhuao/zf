@@ -1,4 +1,6 @@
 {
-  "usingComponents": {}
   
+  "usingComponents": {
+    "canvasdrawer": "/components/canvasdrawer/canvasdrawer"
+  }
 }

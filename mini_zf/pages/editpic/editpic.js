@@ -10,6 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    painting: {},
+    shareImage: '',
     images: [],
     itemList: []
   },
@@ -85,11 +87,6 @@ Page({
     this.setData({
       itemList: items
     })
-
-    items[index].lx = e.touches[0].clientX;
-    items[index].ly = e.touches[0].clientY;
-
-    console.log(items[index])
   },
   WraptouchMove: function (e) {
     if (flag) {
@@ -98,18 +95,142 @@ Page({
         flag = true;
       }, 100)
     }
-    // console.log('WraptouchMove', e)
-    items[index]._lx = e.touches[0].clientX;
-    items[index]._ly = e.touches[0].clientY;
-
-    items[index].left += items[index]._lx - items[index].lx;
-    items[index].top += items[index]._ly - items[index].ly;
-
-    items[index].lx = e.touches[0].clientX;
-    items[index].ly = e.touches[0].clientY;
+  
     console.log(items)
     this.setData({
       itemList: items
     })
   },
+  eventDraw() {
+    wx.showLoading({
+      title: '绘制分享图片中',
+      mask: true
+    })
+    let images = app.data.images
+    this.setData({
+      painting: {
+        width: 648,
+        height: 918,
+        clear: true,
+        views: [
+          {
+            type: 'image',
+            url: '/images1/0551房产.png',
+            top: 0,
+            left: 25,
+            width: 144,
+            height: 144
+          },
+          {
+            type: 'image',
+            url: images[0],
+            top: 80,
+            left: 84,
+            width: 480,
+            height: 160
+          },
+          {
+            type: 'image',
+            url: images[1],
+            top: 80,
+            left: 84,
+            width: 160,
+            height: 160
+          },
+          {
+            type: 'image',
+            url: images[2],
+            top: 80,
+            left: 84+160,
+            width: 160,
+            height: 160
+          },
+          {
+            type: 'image',
+            url: images[3],
+            top: 80,
+            left: 84+320,
+            width: 160,
+            height: 160
+          },
+          {
+            type: 'text',
+            content: '中海国际',
+            fontSize: 16,
+            color: '#402D16',
+            textAlign: 'left',
+            top: 33,
+            left: 96,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: '售',
+            fontSize: 15,
+            color: '#563D20',
+            textAlign: 'left',
+            top: 59.5,
+            left: 96
+          },
+          {
+            type: 'text',
+            content: '',
+            fontSize: 16,
+            lineHeight: 21,
+            color: '#383549',
+            textAlign: 'left',
+            top: 336,
+            left: 44,
+            width: 287,
+            MaxLineNumber: 2,
+            breakWord: true,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: '',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 387,
+            left: 44.5,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: '',
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 391,
+            left: 110,
+            textDecoration: 'line-through'
+          },
+
+        ]
+      }
+    })
+  },
+  eventSave() {
+    wx.saveImageToPhotosAlbum({
+      filePath: this.data.shareImage,
+      success(res) {
+        wx.showToast({
+          title: '保存图片成功',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    })
+  },
+  eventGetImage(event) {
+    console.log(event)
+    wx.hideLoading()
+    const { tempFilePath, errMsg } = event.detail
+    if (errMsg === 'canvasdrawer:ok') {
+      this.setData({
+        shareImage: tempFilePath
+      })
+    }
+  }
 })

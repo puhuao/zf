@@ -7,10 +7,8 @@
     "pages/drag/drag",
     "pages/logs/logs",
     "pages/photo/photo",
-    "pages/input/input",
-    "pages/puzzle/puzzle",
-    "pages/save/save"
-    
+    "pages/save/save",
+    "pages/input/input"
   ],
   "subpackages": [
    {

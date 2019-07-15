@@ -27,8 +27,8 @@ Component({
   data: {
     showCanvas: false,
 
-    width: 750,
-    height: 1060,
+    width: 648,
+    height: 918,
 
     tempFileList: [],
 
@@ -90,6 +90,9 @@ Component({
     startPainting () {
       const { tempFileList, painting: { views } } = this.data
       console.log(tempFileList)
+      this.ctx.fillStyle = "#FFFFFF";
+      this.ctx.fillRect(0, 0, 648, 918);
+
       for (let i = 0, imageIndex = 0; i < views.length; i++) {
         if (views[i].type === 'image') {
           this.drawImage({
