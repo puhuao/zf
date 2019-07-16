@@ -115,7 +115,7 @@ Page({
         views: [
           {
             type: 'image',
-            url: '/images1/0551房产.png',
+            url: images[0],
             top: 0,
             left: 25,
             width: 144,
@@ -124,7 +124,7 @@ Page({
           {
             type: 'image',
             url: images[0],
-            top: 80,
+            top: 80+144,
             left: 84,
             width: 480,
             height: 160
@@ -132,7 +132,7 @@ Page({
           {
             type: 'image',
             url: images[1],
-            top: 80,
+            top: 388,
             left: 84,
             width: 160,
             height: 160
@@ -140,7 +140,7 @@ Page({
           {
             type: 'image',
             url: images[2],
-            top: 80,
+            top: 388,
             left: 84+160,
             width: 160,
             height: 160
@@ -148,7 +148,7 @@ Page({
           {
             type: 'image',
             url: images[3],
-            top: 80,
+            top: 388,
             left: 84+320,
             width: 160,
             height: 160
@@ -159,8 +159,8 @@ Page({
             fontSize: 16,
             color: '#402D16',
             textAlign: 'left',
-            top: 33,
-            left: 96,
+            top: 188,
+            left: 128,
             bolder: true
           },
           {
@@ -169,18 +169,18 @@ Page({
             fontSize: 15,
             color: '#563D20',
             textAlign: 'left',
-            top: 59.5,
-            left: 96
+            top: 192,
+            left: 128+80
           },
           {
             type: 'text',
-            content: '',
-            fontSize: 16,
+            content: '1000',
+            fontSize: 22,
             lineHeight: 21,
             color: '#383549',
             textAlign: 'left',
-            top: 336,
-            left: 44,
+            top: 178,
+            left: 208+15,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -188,24 +188,32 @@ Page({
           },
           {
             type: 'text',
-            content: '',
+            content: '户型',
             fontSize: 19,
             color: '#E62004',
             textAlign: 'left',
-            top: 387,
-            left: 44.5,
+            top: 388+160,
+            left: 84,
             bolder: true
           },
           {
             type: 'text',
-            content: '',
+            content: '三室一厅',
             fontSize: 13,
             color: '#7E7E8B',
             textAlign: 'left',
-            top: 391,
-            left: 110,
+            top: 388+160+40,
+            left: 84,
             textDecoration: 'line-through'
           },
+          {
+            type: 'image',
+            url: images[0],
+            top: 674,
+            left: 404,
+            width: 244,
+            height: 244
+          }
 
         ]
       }

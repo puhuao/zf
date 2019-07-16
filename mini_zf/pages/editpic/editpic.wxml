@@ -67,7 +67,7 @@
     <button bindtap="chooseimage">照片切换</button>
     <button bindtap="chooseimage">页面切换</button>
   </view>
- <image src="{{shareImage}}" class="share-image"></image>
+ <image src="{{shareImage}}" class="image_container"></image>
   <button bind:tap="eventDraw">绘制</button>
   <button bind:tap="eventSave">保存到本地</button>
 </view>
