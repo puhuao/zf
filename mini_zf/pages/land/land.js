@@ -1,4 +1,4 @@
-// pages/editpic/editpic.js
+// pages/land/land.js
 let index = 0,
   items = [],
   flag = true,
@@ -21,11 +21,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
     this.setData({
       images: app.data.images
     });
-    
+
   },
 
   /**
@@ -37,12 +37,12 @@ Page({
       images: app.data.images
     });
     let pos = 0;
-    for (let i = 0; i < app.data.images.length; i++){
+    for (let i = 0; i < app.data.images.length; i++) {
       pos = i;
       console.log(app.data.images[i])
       this.setDropItem({
         url: app.data.images[i],
-        position:pos
+        position: pos
       });
     }
   },
@@ -54,7 +54,7 @@ Page({
 
   },
 
- 
+
   setDropItem(imgData) {
     let data = {},
       _this = this;
@@ -67,7 +67,7 @@ Page({
         data.image = imgData.url; //地址
         data.id = ++itemId; //id
         data.top = 0; //top定位
-        data.left = imgData.position*160; //left定位
+        data.left = imgData.position * 160; //left定位
         data.scale = 1; //scale缩放
         data.active = false; //选中状态
         console.log(data)
@@ -97,7 +97,7 @@ Page({
         flag = true;
       }, 100)
     }
-  
+
     console.log(items)
     this.setData({
       itemList: items
@@ -126,7 +126,7 @@ Page({
           {
             type: 'image',
             url: images[0],
-            top: 80+144,
+            top: 80 + 144,
             left: 84,
             width: 480,
             height: 160
@@ -143,7 +143,7 @@ Page({
             type: 'image',
             url: images[2],
             top: 388,
-            left: 84+160,
+            left: 84 + 160,
             width: 160,
             height: 160
           },
@@ -151,7 +151,7 @@ Page({
             type: 'image',
             url: images[3],
             top: 388,
-            left: 84+320,
+            left: 84 + 320,
             width: 160,
             height: 160
           },
@@ -172,7 +172,7 @@ Page({
             color: '#563D20',
             textAlign: 'left',
             top: 192,
-            left: 128+80
+            left: 128 + 80
           },
           {
             type: 'text',
@@ -182,7 +182,7 @@ Page({
             color: '#383549',
             textAlign: 'left',
             top: 178,
-            left: 208+15,
+            left: 208 + 15,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -194,7 +194,7 @@ Page({
             fontSize: 19,
             color: '#E62004',
             textAlign: 'left',
-            top: 388+160,
+            top: 388 + 160,
             left: 84,
             bolder: true
           },
@@ -204,7 +204,7 @@ Page({
             fontSize: 13,
             color: '#7E7E8B',
             textAlign: 'left',
-            top: 388+160+40,
+            top: 388 + 160 + 40,
             left: 84,
             textDecoration: 'line-through'
           },
@@ -243,7 +243,7 @@ Page({
       })
     }
   },
-  changePage(){
+  changePage() {
     wx.navigateTo({
       url: '../land/land'
     })

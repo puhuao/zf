@@ -1,4 +1,4 @@
-<!--pages/editpic/editpic.wxml-->
+<!--pages/land/land.wxml-->
 <view class='page'>
   <view class='image_container'>
     <image src="add_logo.png" class="tag"></image>

@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "pages/index/index",
     "pages/nd/nd",
     "pages/editpic/editpic",
@@ -8,13 +7,14 @@
     "pages/logs/logs",
     "pages/photo/photo",
     "pages/save/save",
-    "pages/input/input"
+    "pages/input/input",
+    "pages/land/land"
   ],
   "subpackages": [
-   {
-    "root": "images1",
-    "pages": []
-  },
+    {
+      "root": "images1",
+      "pages": []
+    },
     {
       "root": "images2",
       "pages": []
