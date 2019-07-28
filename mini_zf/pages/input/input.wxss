@@ -27,6 +27,7 @@
   border-radius: 10rpx;
   color: #000;
   cursor: pointer;
+  margin-top:30rpx;
 }
 
 .use_name {

@@ -13,8 +13,8 @@ Page({
     painting: {},
     shareImage: '',
     images: [],
-    itemList: []
-
+    itemList: [],
+    sale:{}
   },
 
   /**
@@ -23,7 +23,8 @@ Page({
   onLoad: function (options) {
     
     this.setData({
-      images: app.data.images
+      images: app.data.images,
+      sale: app.globalData
     });
     
   },
@@ -34,8 +35,10 @@ Page({
    */
   onReady: function () {
     this.setData({
-      images: app.data.images
+      images: app.data.images,
+      sale: app.globalData
     });
+    console.log(this.data.sale)
     let pos = 0;
     for (let i = 0; i < app.data.images.length; i++){
       pos = i;
@@ -47,14 +50,6 @@ Page({
     }
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
- 
   setDropItem(imgData) {
     let data = {},
       _this = this;
@@ -109,6 +104,7 @@ Page({
       mask: true
     })
     let images = app.data.images
+    let sale= app.globalData
     this.setData({
       painting: {
         width: 648,
@@ -157,7 +153,7 @@ Page({
           },
           {
             type: 'text',
-            content: '中海国际',
+            content: sale.name,
             fontSize: 16,
             color: '#402D16',
             textAlign: 'left',
@@ -176,7 +172,7 @@ Page({
           },
           {
             type: 'text',
-            content: '1000',
+            content: sale.mony,
             fontSize: 22,
             lineHeight: 21,
             color: '#383549',
@@ -200,11 +196,91 @@ Page({
           },
           {
             type: 'text',
-            content: '三室一厅',
+            content: sale.type,
             fontSize: 13,
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388+160+40,
+            left: 84,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '面积',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 388 + 160,
+            left: 84+120,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.size,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 388 + 160 + 40,
+            left: 84+120,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '楼层',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 388 + 160,
+            left: 84 + 120+120,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.floor,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 388 + 160 + 40,
+            left: 84 + 120+120,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '装修',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 388 + 160,
+            left: 84 + 120 + 120+120,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.situation,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 388 + 160 + 40,
+            left: 84 + 120 + 120+120,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '其他说明',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 388 + 160+40+40,
+            left: 84 ,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.extra,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 388 + 160 + 40,
             left: 84,
             textDecoration: 'line-through'
           },

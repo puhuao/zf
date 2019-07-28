@@ -1,4 +1,5 @@
 // pages/land/land.js
+// https://github.com/BearstOzawa/ourTalk
 let index = 0,
   items = [],
   flag = true,
@@ -109,60 +110,61 @@ Page({
       mask: true
     })
     let images = app.data.images
+    let sale = app.globalData
     this.setData({
       painting: {
-        width: 648,
-        height: 918,
+        width: 740,
+        height: 524,
         clear: true,
         views: [
           {
             type: 'image',
             url: images[0],
             top: 0,
-            left: 25,
-            width: 144,
-            height: 144
+            left: 197*2.5,
+            width: 80*2.5,
+            height: 30*2.5
           },
           {
             type: 'image',
             url: images[0],
-            top: 80 + 144,
-            left: 84,
-            width: 480,
-            height: 160
+            top: 68*2.5,
+            left: 5*2.5,
+            width: 150*2.5,
+            height: 84*2.5
           },
           {
             type: 'image',
             url: images[1],
-            top: 388,
-            left: 84,
-            width: 160,
-            height: 160
+            top: 152*2.5,
+            left: 5*2.5,
+            width: 50*2.5,
+            height: 50*2.5
           },
           {
             type: 'image',
             url: images[2],
-            top: 388,
-            left: 84 + 160,
-            width: 160,
-            height: 160
+            top: 152 * 2.5,
+            left: 55*2.5,
+            width: 50 * 2.5,
+            height: 50 * 2.5
           },
           {
             type: 'image',
             url: images[3],
-            top: 388,
-            left: 84 + 320,
-            width: 160,
-            height: 160
+            top: 152 * 2.5,
+            left: 105*2.5,
+            width: 50 * 2.5,
+            height: 50 * 2.5
           },
           {
             type: 'text',
-            content: '中海国际',
+            content: sale.name,
             fontSize: 16,
             color: '#402D16',
             textAlign: 'left',
-            top: 188,
-            left: 128,
+            top: 48*2.5,
+            left: 25*2.5,
             bolder: true
           },
           {
@@ -171,18 +173,18 @@ Page({
             fontSize: 15,
             color: '#563D20',
             textAlign: 'left',
-            top: 192,
-            left: 128 + 80
+            top: 56*2.5,
+            left: 73*2.5
           },
           {
             type: 'text',
-            content: '1000',
+            content: sale.mony,
             fontSize: 22,
             lineHeight: 21,
             color: '#383549',
             textAlign: 'left',
-            top: 178,
-            left: 208 + 15,
+            top: 40*2.5,
+            left: 84*2.5,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -194,27 +196,107 @@ Page({
             fontSize: 19,
             color: '#E62004',
             textAlign: 'left',
-            top: 388 + 160,
-            left: 84,
+            top: 68*2.5,
+            left: 186*2.5,
             bolder: true
           },
           {
             type: 'text',
-            content: '三室一厅',
+            content: sale.type,
             fontSize: 13,
             color: '#7E7E8B',
             textAlign: 'left',
-            top: 388 + 160 + 40,
-            left: 84,
+            top: 78*2.5,
+            left: 176*2.5,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '面积',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 68 * 2.5,
+            left: 234*2.5,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.size,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 78 * 2.5,
+            left: 234 * 2.5,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '楼层',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 100*2.5,
+            left: 176 * 2.5,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.floor,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 110*2.5,
+            left: 176*2.5,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '装修',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 100 * 2.5,
+            left: 234 * 2.5,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.situation,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 110 * 2.5,
+            left: 234 * 2.5,
+            textDecoration: 'line-through'
+          },
+          {
+            type: 'text',
+            content: '其他说明',
+            fontSize: 19,
+            color: '#E62004',
+            textAlign: 'left',
+            top: 129 * 2.5,
+            left: 176 * 2.5,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.extra,
+            fontSize: 13,
+            color: '#7E7E8B',
+            textAlign: 'left',
+            top: 139 * 2.5,
+            left: 176 * 2.5,
             textDecoration: 'line-through'
           },
           {
             type: 'image',
             url: images[0],
-            top: 674,
-            left: 404,
-            width: 244,
-            height: 244
+            top: 136*2.5,
+            left: 223*2.5,
+            width: 74*2.5,
+            height: 74*2.5
           }
 
         ]
@@ -244,8 +326,8 @@ Page({
     }
   },
   changePage() {
-    wx.navigateTo({
-      url: '../land/land'
-    })
+    // wx.navigateTo({
+    //   url: '../land/land'
+    // })
   }
 })

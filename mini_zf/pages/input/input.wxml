@@ -108,6 +108,6 @@
     </view>
   </view>
   <view class="submit">
-     <button style="margin:30rpx;" bindtap="bindViewTap">下一步</button>
+     <button bindtap="bindViewTap">下一步</button>
   </view>
 </view>

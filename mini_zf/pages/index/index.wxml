@@ -1,5 +1,5 @@
 <!--index.wxml-->
 <view class="page">
- <image class='page' bindtap="bindViewTap" src="splash.png" mode='aspectFit'></image>
+ <image class='imagesize' bindtap="bindViewTap" src="splash.png" mode='widthFix'></image>
   
 </view>

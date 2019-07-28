@@ -1,3 +1,4 @@
+
 //app.js
 App({
   onLaunch: function () {
@@ -65,6 +66,18 @@ App({
     state:''
   },
   globalData: {
-    userInfo: null
+    name: '',
+    size: '',
+    mony: '',
+    monyPer: '',
+    type: '',
+    situation: '',
+    floor: '',
+    age: '',
+    extra: '',
+    namePhone: '',
+    sort: '',
+    propertyYears: '',
+    rentMony: ''
   }
 })

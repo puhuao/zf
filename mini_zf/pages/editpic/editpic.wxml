@@ -4,9 +4,9 @@
     <image src="add_logo.png" class="tag"></image>
     <image src="add_logo.png" class="share-image"></image>
     <view class='area_name'>
-      <text class='name'>庄海国际</text>
+      <text class='name'>{{sale.type}}</text>
       <text class='name_tag'>售</text>
-      <text class='mony'>1000</text>
+      <text class='mony'>{{sale.mony}}</text>
     </view>
     <view class='images'>
       <view class='touchWrap' style='transform: scale({{itemList[0].scale}});top:0px;left:0}px; '>
@@ -38,25 +38,25 @@
       <view class='des_half'>
         <view class='des'>
           <text class='name'>户型</text>
-          <text class='name'>三室两厅</text>
+          <text class='name'>{{sale.type}}</text>
         </view>
         <view class='des'>
           <text class='name'>面积</text>
-          <text class='name'>142</text>
+          <text class='name'>{{sale.size}}</text>
         </view>
         <view class='des'>
           <text class='name'>楼层</text>
-          <text class='name'>19</text>
+          <text class='name'>{{sale.floor}}</text>
         </view>
         <view class='des'>
           <text class='name'>装修</text>
-          <text class='name'>精装</text>
+          <text class='name'>{{sale.situation}}</text>
         </view>
       </view>
       <view class='des_half'>
         <view class='des_v'>
           <text class='name'>其他说明：</text>
-          <text class='name'>三室两厅</text>
+          <text class='name'>{{sale.extra}}</text>
         </view>
       </view>
 
