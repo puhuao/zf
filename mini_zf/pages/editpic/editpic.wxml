@@ -1,10 +1,11 @@
 <!--pages/editpic/editpic.wxml-->
 <view class='page'>
   <view class='image_container'>
-    <image src="add_logo.png" class="tag"></image>
-    <image src="add_logo.png" class="share-image"></image>
+    <image src="add_logo.png" class="tag" ></image>
+    <image src="add_logo.png" class="share-image" bindtap="editLogo" url="{{logo}}"></image>
+    <image src="{{logo}}" class="share-image" bindtap="editLogo"></image>
     <view class='area_name'>
-      <text class='name'>{{sale.type}}</text>
+      <text class='name' bindtap="editName">{{sale.name}}</text>
       <text class='name_tag'>售</text>
       <text class='mony'>{{sale.mony}}</text>
     </view>

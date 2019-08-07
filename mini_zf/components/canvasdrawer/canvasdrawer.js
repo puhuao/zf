@@ -16,6 +16,8 @@ Component({
               this.readyPigment()
             }
           } else {
+
+            
             if (newVal && newVal.mode !== 'same') {
               this.triggerEvent('getImage', {errMsg: 'canvasdrawer:samme params'})
             }

@@ -36,6 +36,7 @@ page {
 }
 
 .name {
+   width: 148rpx;
   display: inline-block;
   font-size: 26rpx;
   text-align: center;

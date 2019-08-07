@@ -14,7 +14,8 @@ Page({
     shareImage: '',
     images: [],
     itemList: [],
-    sale:{}
+    sale:{},
+    logo:''
   },
 
   /**
@@ -24,7 +25,8 @@ Page({
     
     this.setData({
       images: app.data.images,
-      sale: app.globalData
+      sale: app.globalData,
+      logo:app.globalData.logo,
     });
     
   },
@@ -49,7 +51,16 @@ Page({
       });
     }
   },
-
+  nameInput: function (e) {
+    let v = 'rent.name'
+    app.globalData.name = e.detail.value
+  },
+  editLogo: function(e){
+    wx.navigateTo({
+      url: '../logos/logos'
+    })
+    console.log(app.globalData)
+  },
   setDropItem(imgData) {
     let data = {},
       _this = this;
@@ -154,11 +165,12 @@ Page({
           {
             type: 'text',
             content: sale.name,
-            fontSize: 16,
+            fontSize:30,
             color: '#402D16',
             textAlign: 'left',
             top: 188,
             left: 128,
+            width: 148,
             bolder: true
           },
           {

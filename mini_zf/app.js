@@ -78,6 +78,7 @@ App({
     namePhone: '',
     sort: '',
     propertyYears: '',
-    rentMony: ''
+    rentMony: '',
+    logo:''
   }
 })
