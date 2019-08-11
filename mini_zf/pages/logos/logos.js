@@ -18,7 +18,9 @@ Page({
     wx.cloud.getTempFileURL({
       fileList: [fileId],
       success: res => {
+        console.log(res.fileList)
         app.globalData.logo = res.fileList.tempFileURL
+        console.log(app.globalData.logo)
         var pages = getCurrentPages();//当前页面栈
 
         if (pages.length > 1) {
@@ -28,15 +30,12 @@ Page({
           var currPage = pages[pages.length - 1]; // 当前页面，若不对当前页面进行操作，可省去
 
           beforePage.changeData();//触发父页面中的方法
-          console.log(app.globalData.logo)
+          console.log(pages)
         }
-
-        wx.navigateBack({
-
-          delta: -1
-
-        })
-      
+        wx.navigateBack({ delta: 1 });
+      },
+      fail: err => {
+        console.log(err)
       }
     })
   },
