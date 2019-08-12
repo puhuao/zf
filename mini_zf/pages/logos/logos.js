@@ -1,7 +1,7 @@
 // pages/logos/logos.js
 wx.cloud.init();
 const db = wx.cloud.database({});
-const cont = db.collection('logo');
+const cont = db.collection('logos');
 var app = getApp()
 
 Page({
@@ -19,18 +19,17 @@ Page({
       fileList: [fileId],
       success: res => {
         console.log(res.fileList)
-        app.globalData.logo = res.fileList.tempFileURL
+        app.globalData.logo = res.fileList[0].tempFileURL
         console.log(app.globalData.logo)
         var pages = getCurrentPages();//当前页面栈
-
+        console.log(res.fileList[0].tempFileURL)
         if (pages.length > 1) {
 
           var beforePage = pages[pages.length - 2];//获取上一个页面实例对象
-
-          var currPage = pages[pages.length - 1]; // 当前页面，若不对当前页面进行操作，可省去
-
-          beforePage.changeData();//触发父页面中的方法
-          console.log(pages)
+          beforePage.setData({
+            logo: res.fileList[0].tempFileURL
+          });
+        
         }
         wx.navigateBack({ delta: 1 });
       },
@@ -50,7 +49,7 @@ Page({
       env: 'zhufeng-lb3t8'
     })
     //2、开始查询数据了  news对应的是集合的名称   
-    db.collection('logo').limit(100).get({
+    db.collection('logos').limit(100).get({
       //如果查询成功的话    
       success: res => {
         console.log(res.data)
