@@ -1,17 +1,9 @@
-/* pages/land/land.wxss */
-
-page {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* pages/edit2pic/edit2pic.wxss */
 
 .image_container {
   margin: 0rpx;
-  width: 740rpx;
-  height: 524rpx;
+  width: 648rpx;
+  height: 918rpx;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -19,8 +11,8 @@ page {
 }
 
 .share-images {
-  height: 117rpx;
-  width: 117rpx;
+  height: 144rpx;
+  width: 144rpx;
   margin-left: 25rpx;
   margin-top: 18rpx;
   position: relative;
@@ -43,16 +35,17 @@ page {
 }
 
 .area_name {
-  width: 390rpx;
-  height: 45rpx;
-  margin-left: 68rpx;
-  margin-top: 18rpx;
+  width: 480rpx;
+  height: 56rpx;
+  margin-left: 84rpx;
+  margin-top: 22rpx;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
 .name {
+   width: 148rpx;
   display: inline-block;
   font-size: 26rpx;
   text-align: center;
@@ -83,62 +76,62 @@ page {
 }
 
 .images {
-  width: 390rpx;
-  height: 352rpx;
+  width: 480rpx;
+  height: 434rpx;
   display: flex;
   flex-direction: column;
   margin-left: 84rpx;
 }
 
 .big_image {
-  width: 390rpx;
-  height: 222rpx;
+  width: 480rpx;
+  height: 274rpx;
 }
 
 .small_image_container {
-  width: 390rpx;
-  height: 130rpx;
+  width: 480rpx;
+  height: 160rpx;
   display: flex;
   flex-direction: row;
 }
 
 .four_image {
-  width: 130rpx;
-  height: 130rpx;
+  width: 160rpx;
+  height: 160rpx;
 }
 
 .des_container {
-  width: 390rpx;
-  height: 115rpx;
+  width: 480rpx;
+  height: 142rpx;
   display: flex;
   flex-direction: column;
-  margin-left: 68rpx;
+  margin-left: 84rpx;
   margin-top: 12rpx;
   z-index: 5;
 }
 
 .des {
-  width: 98rpx;
-  height: 58rpx;
+  width: 120rpx;
+  height: 71rpx;
   display: flex;
   flex-direction: column;
 }
 
 .des_half {
-  width: 390rpx;
-  height: 58rpx;
+  width: 480rpx;
+  height: 71rpx;
   display: flex;
   flex-direction: row;
 }
 .des_v {
-  width: 390rpx;
-  height: 58rpx;
+  width: 480rpx;
+  height: 71rpx;
   display: flex;
   flex-direction: row;
 }
 .tag{
-  width: 117rpx;
-  height: 117rpx;
+  width: 144rpx;
+  height: 144rpx;
   right: 0rpx;
   bottom: 0rpx;
   align-self: flex-end;
@@ -146,7 +139,7 @@ page {
   z-index: 1;
 }
 .button_area{
-  width: 390rpx;
+  width: 480rpx;
   display: flex;
   margin-top: 12rpx;
   flex-direction: row;

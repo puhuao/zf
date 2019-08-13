@@ -18,11 +18,28 @@ page {
   position: relative;
 }
 
-.share-image {
+.share-images {
   height: 144rpx;
   width: 144rpx;
   margin-left: 25rpx;
   margin-top: 18rpx;
+  position: relative;
+}
+.share-image{
+   height : 100%;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+.share-image1{
+   height : 100%;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    display: block;
 }
 
 .area_name {

@@ -1,6 +1,6 @@
-// pages/editpic/editpic.js
+// pages/edit2pic/edit2pic.js
 let index = 0,
-  items = [],
+items = [],
   flag = true,
   itemId = 1;
 var app = getApp()
@@ -14,21 +14,21 @@ Page({
     shareImage: '',
     images: [],
     itemList: [],
-    sale:{},
-    logo:''
+    sale: {},
+    logo: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
     this.setData({
       images: app.data.images,
       sale: app.globalData,
-      logo:app.globalData.logo,
+      logo: app.globalData.logo,
     });
-    
+
   },
 
   /**
@@ -42,12 +42,12 @@ Page({
     });
     console.log(this.data.sale)
     let pos = 0;
-    for (let i = 0; i < app.data.images.length; i++){
+    for (let i = 0; i < app.data.images.length; i++) {
       pos = i;
       console.log(app.data.images[i])
       this.setDropItem({
         url: app.data.images[i],
-        position:pos
+        position: pos
       });
     }
   },
@@ -55,7 +55,7 @@ Page({
     let v = 'rent.name'
     app.globalData.name = e.detail.value
   },
-  editLogo: function(e){
+  editLogo: function (e) {
     wx.navigateTo({
       url: '../logos/logos'
     })
@@ -73,7 +73,7 @@ Page({
         data.image = imgData.url; //地址
         data.id = ++itemId; //id
         data.top = 0; //top定位
-        data.left = imgData.position*160; //left定位
+        data.left = imgData.position * 160; //left定位
         data.scale = 1; //scale缩放
         data.active = false; //选中状态
         console.log(data)
@@ -103,7 +103,7 @@ Page({
         flag = true;
       }, 100)
     }
-  
+
     console.log(items)
     this.setData({
       itemList: items
@@ -115,7 +115,7 @@ Page({
       mask: true
     })
     let images = app.data.images
-    let sale= app.globalData
+    let sale = app.globalData
     this.setData({
       painting: {
         width: 648,
@@ -133,7 +133,7 @@ Page({
           {
             type: 'image',
             url: images[0],
-            top: 80+144,
+            top: 80 + 144,
             left: 84,
             width: 480,
             height: 160
@@ -143,29 +143,29 @@ Page({
             url: images[1],
             top: 388,
             left: 84,
-            width: 160,
+            width: 480,
             height: 160
           },
           {
             type: 'image',
-            url: images[2],
-            top: 388,
-            left: 84+160,
-            width: 160,
-            height: 160
+            url: "",
+            top: 0,
+            left: 0,
+            width: 0,
+            height: 0
           },
           {
             type: 'image',
-            url: images[3],
-            top: 388,
-            left: 84+320,
-            width: 160,
-            height: 160
+            url: "",
+            top: 0,
+            left: 0,
+            width: 0,
+            height: 0
           },
           {
             type: 'text',
             content: sale.name,
-            fontSize:30,
+            fontSize: 30,
             color: '#402D16',
             textAlign: 'left',
             top: 188,
@@ -180,7 +180,7 @@ Page({
             color: '#563D20',
             textAlign: 'left',
             top: 192,
-            left: 128+80
+            left: 128 + 80
           },
           {
             type: 'text',
@@ -190,7 +190,7 @@ Page({
             color: '#383549',
             textAlign: 'left',
             top: 178,
-            left: 208+15,
+            left: 208 + 15,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -202,7 +202,7 @@ Page({
             fontSize: 19,
             color: '#E62004',
             textAlign: 'left',
-            top: 388+160,
+            top: 388 + 160,
             left: 84,
             bolder: true
           },
@@ -212,7 +212,7 @@ Page({
             fontSize: 13,
             color: '#7E7E8B',
             textAlign: 'left',
-            top: 388+160+40,
+            top: 388 + 160 + 40,
             left: 84,
             textDecoration: 'line-through'
           },
@@ -223,7 +223,7 @@ Page({
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160,
-            left: 84+120,
+            left: 84 + 120,
             bolder: true
           },
           {
@@ -233,7 +233,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84+120,
+            left: 84 + 120,
             textDecoration: 'line-through'
           },
           {
@@ -243,7 +243,7 @@ Page({
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160,
-            left: 84 + 120+120,
+            left: 84 + 120 + 120,
             bolder: true
           },
           {
@@ -253,7 +253,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84 + 120+120,
+            left: 84 + 120 + 120,
             textDecoration: 'line-through'
           },
           {
@@ -263,7 +263,7 @@ Page({
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160,
-            left: 84 + 120 + 120+120,
+            left: 84 + 120 + 120 + 120,
             bolder: true
           },
           {
@@ -273,7 +273,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84 + 120 + 120+120,
+            left: 84 + 120 + 120 + 120,
             textDecoration: 'line-through'
           },
           {
@@ -282,8 +282,8 @@ Page({
             fontSize: 19,
             color: '#E62004',
             textAlign: 'left',
-            top: 388 + 160+40+40,
-            left: 84 ,
+            top: 388 + 160 + 40 + 40,
+            left: 84,
             bolder: true
           },
           {
@@ -331,7 +331,7 @@ Page({
       })
     }
   },
-  changePage(){
+  changePage() {
     wx.navigateTo({
       url: '../land/land'
     })

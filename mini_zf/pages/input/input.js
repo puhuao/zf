@@ -12,10 +12,16 @@ Page({
     state: ''
   },
   bindViewTap: function () {
-    wx.navigateTo({
-      url: '../editpic/editpic'
-    })
-    console.log(app.globalData)
+    console.log(app.data)
+    if (app.data.images.size==2){
+      wx.navigateTo({
+        url: '../edit2pic/edit2pic'
+      })
+    }else{
+      wx.navigateTo({
+        url: '../editpic/editpic'
+      })
+    }
   },
   //选择用途后加样式
   select_use: function (e) {

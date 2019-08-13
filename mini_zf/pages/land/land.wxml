@@ -2,7 +2,10 @@
 <view class='page'>
   <view class='image_container'>
     <image src="add_logo.png" class="tag"></image>
-    <image src="add_logo.png" class="share-image"></image>
+    <view class='share-images' bindtap="editLogo">
+       <image src="add_logo.png" class='share-image{{logo==undefined?"1":""}}'></image>
+      <image src="{{logo}}" class="share-image1"></image>
+    </view>
     <view class='area_name'>
       <text class='name'>庄海国际</text>
       <text class='name_tag'>售</text>

@@ -1,11 +1,12 @@
-<!--pages/editpic/editpic.wxml-->
+<!--pages/edit2pic/edit2pic.wxml-->
 <view class='page'>
   <view class='image_container'>
-    <image src="add_logo.png" class="tag" ></image>
+    <image src="add_logo.png" class="tag"></image>
     <view class='share-images' bindtap="editLogo">
       <image src="add_logo.png" class='share-image{{logo==undefined?"1":""}}'></image>
       <image src="{{logo}}" class="share-image1"></image>
     </view>
+
     <view class='area_name'>
       <text class='name' bindtap="editName">{{sale.name}}</text>
       <text class='name_tag'>售</text>
@@ -17,23 +18,9 @@
           <image class='big_image' src="{{itemList[0].image}}" data-id='{{itemList[0].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
         </view>
       </view>
-      <view class='small_image_container'>
-        <view class='touchWrap' style='transform: scale({{itemList[1].scale}});top:0rpx;left:0rpx; '>
-          <view class='imgWrap {{itemList[1].active? "touchActive":""}}' style="border: {{itemList[1].active?4:0}}rpx #fff dashed;">
-            <image class='four_image' src="{{itemList[1].image}}" data-id='{{itemList[1].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
-          </view>
-        </view>
-
-        <view class='touchWrap' style='transform: scale({{itemList[2].scale}});top:0rpx;left:160rpx; '>
-          <view class='imgWrap {{itemList[2].active? "touchActive":""}}' style="border: {{itemList[2].active?4:0}}rpx #fff dashed;">
-            <image class='four_image' src="{{itemList[2].image}}" data-id='{{itemList[2].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
-          </view>
-        </view>
-
-        <view class='touchWrap' style='transform: scale({{itemList[3].scale}});top:0rpx;left:320rpx; '>
-          <view class='imgWrap {{itemList[3].active? "touchActive":""}}' style="border: {{itemList[3].active?4:0}}rpx #fff dashed;">
-            <image class='four_image' src="{{itemList[3].image}}" data-id='{{itemList[3].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
-          </view>
+      <view class='touchWrap' style='transform: scale({{itemList[1].scale}});top:0px;left:0}px; '>
+        <view class='imgWrap {{itemList[1].active? "touchActive":""}}' style="border: {{itemList[1].active?4:0}}rpx #fff dashed;">
+          <image class='big_image' src="{{itemList[1].image}}" data-id='{{itemList[1].id}}' bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
         </view>
       </view>
     </view>
@@ -64,13 +51,13 @@
       </view>
 
     </view>
-  <canvasdrawer painting="{{painting}}" bind:getImage="eventGetImage"/>
+    <canvasdrawer painting="{{painting}}" bind:getImage="eventGetImage" />
   </view>
   <view class='button_area'>
     <button bindtap="chooseimage">照片切换</button>
     <button bindtap="changePage">页面切换</button>
   </view>
- <image src="{{shareImage}}" class="image_container"></image>
+  <image src="{{shareImage}}" class="image_container"></image>
   <button bind:tap="eventDraw">绘制</button>
   <button bind:tap="eventSave">保存到本地</button>
 </view>
