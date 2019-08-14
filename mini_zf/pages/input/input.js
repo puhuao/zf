@@ -12,12 +12,16 @@ Page({
     state: ''
   },
   bindViewTap: function () {
-    console.log(app.data)
-    if (app.data.images.size==2){
+   
+    let images = app.data.images
+    console.log(images)
+    if (images.length==2){
+      console.log("app.data.images.size=2?" + images.length)
       wx.navigateTo({
         url: '../edit2pic/edit2pic'
       })
     }else{
+      console.log("app.data.images.size=4?" + images.length)
       wx.navigateTo({
         url: '../editpic/editpic'
       })

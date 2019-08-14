@@ -10,7 +10,8 @@
     "pages/input/input",
     "pages/land/land",
     "pages/logos/logos",
-    "pages/edit2pic/edit2pic"
+    "pages/edit2pic/edit2pic",
+    "pages/update/update"
   ],
   "window": {
     "backgroundTextStyle": "light",

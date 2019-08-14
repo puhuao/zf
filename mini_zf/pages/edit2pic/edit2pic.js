@@ -51,9 +51,12 @@ Page({
       });
     }
   },
-  nameInput: function (e) {
-    let v = 'rent.name'
-    app.globalData.name = e.detail.value
+  editName: function (e) {
+    let content = e.currentTarget.dataset.data
+    wx.navigateTo({
+      url: '../update/update?content=' + content
+    })
+   
   },
   editLogo: function (e) {
     wx.navigateTo({

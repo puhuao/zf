@@ -7,7 +7,7 @@
       <image src="{{logo}}" class="share-image1"></image>
     </view>
     <view class='area_name'>
-      <text class='name'>庄海国际</text>
+      <text class='name' bindtap="editName" data-content='{{sale.name}}'>{{sale.name}}</text>
       <text class='name_tag'>售</text>
       <text class='mony'>1000</text>
     </view>

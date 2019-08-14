@@ -19,7 +19,7 @@ Page({ //事件处理函数
   removeImage(e) {
     const idx = e.target.dataset.idx
     this.data.images.splice(idx, 1)
-   
+
   },
 
   handleImagePreview(e) {
@@ -37,25 +37,19 @@ Page({ //事件处理函数
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
       success: function(res) {
-        // const images = res.tempFilePaths
-        // _this.data.images = images.length <= 4 ? images : images.slice(0, 3)
-        // console.log({ '选择图片的返回数据': res });
-        // res.tempFilePaths.forEach(v => {
-        //   console.log({ '遍历每一张图': v });
-        //   _this.compress(v, '450', false, function (res) {
-          app.data.images = res.tempFilePaths
+
+        app.data.images = res.tempFilePaths
+        console.log("app.data.images.size=?" + app.data.images)
         _this.setData({
           images: res.tempFilePaths
         });
         const images = res.tempFilePaths
-        if (images.length>0){
+        if (images.length > 0) {
           _this.setData({
             showInput: true
           });
         }
-        //   });
-        // })
-        // $digest(this)
+
       }
     })
   },

@@ -28,7 +28,13 @@ Page({
     });
 
   },
+  editName: function (e) {
+    let content = e.currentTarget.dataset.data
+    wx.navigateTo({
+      url: '../update/update?content=' + content
+    })
 
+  },
   onReady: function() {
     this.setData({
       images: app.data.images

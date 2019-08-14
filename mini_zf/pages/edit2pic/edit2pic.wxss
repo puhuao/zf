@@ -1,5 +1,11 @@
 /* pages/edit2pic/edit2pic.wxss */
-
+page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .image_container {
   margin: 0rpx;
   width: 648rpx;

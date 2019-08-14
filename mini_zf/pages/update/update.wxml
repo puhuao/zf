@@ -1,0 +1,12 @@
+<!--pages/update/update.wxml-->
+<view class='page'>
+
+  <view class="widgets_input">
+    <view>请输入修改的内容</view>
+    <input bindinput="input" placeholder="{{content}}" auto-focus/>
+  </view>
+
+  <view class="submit">
+    <button bindtap="bindViewTap">确认</button>
+  </view>
+</view>
