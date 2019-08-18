@@ -30,10 +30,11 @@ Page({
   },
   editName: function (e) {
     let content = e.currentTarget.dataset.data
+    let name = e.currentTarget.dataset.name
+    console.log(content + "-----name=" + name)
     wx.navigateTo({
-      url: '../update/update?content=' + content
+      url: '../update/update?content=' + content + '&name=' + name
     })
-
   },
   onReady: function() {
     this.setData({

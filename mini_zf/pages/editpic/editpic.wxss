@@ -61,6 +61,7 @@ page {
   cursor: pointer;
   line-height: 30rpx;
   margin-left: 12rpx;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 .name_tag {
   display: inline-block;

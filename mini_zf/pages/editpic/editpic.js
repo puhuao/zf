@@ -52,9 +52,11 @@ Page({
     }
   },
   editName: function (e) {
-    let content = e.currentTarget.dataset.data
+    let content = e.currentTarget.dataset.content
+    let name = e.currentTarget.dataset.name
+    console.log(content+"-----name="+name)
     wx.navigateTo({
-      url: '../update/update?content=' + content
+      url: '../update/update?content=' + content +'&name='+name
     })
 
   },
@@ -168,8 +170,8 @@ Page({
           {
             type: 'text',
             content: sale.name,
-            fontSize:30,
-            color: '#402D16',
+            fontSize:36,
+            color: '#E62004',
             textAlign: 'left',
             top: 188,
             left: 128,
@@ -179,21 +181,60 @@ Page({
           {
             type: 'text',
             content: '售',
-            fontSize: 15,
-            color: '#563D20',
+            fontSize: 26,
+            color: '#E62004',
             textAlign: 'left',
-            top: 192,
-            left: 128+80
+            top: 190+10,
+            left: 128+80+80
           },
           {
             type: 'text',
             content: sale.mony,
-            fontSize: 22,
+            fontSize: 40,
             lineHeight: 21,
-            color: '#383549',
+            color: '#E62004',
             textAlign: 'left',
             top: 178,
-            left: 208+15,
+            left: 208+15+80,
+            width: 287,
+            MaxLineNumber: 2,
+            breakWord: true,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: '万元',
+            fontSize: 13,
+            lineHeight: 21,
+            textAlign: 'left',
+            top: 178+15,
+            left: 208 + 15 + 80+60,
+            width: 287,
+            MaxLineNumber: 2,
+            breakWord: true,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: '单价：',
+            fontSize: 13,
+            lineHeight: 21,
+            textAlign: 'left',
+            top: 178 + 30,
+            left: 208 + 15 + 80+60,
+            width: 287,
+            MaxLineNumber: 2,
+            breakWord: true,
+            bolder: true
+          },
+          {
+            type: 'text',
+            content: sale.monyPer+'元',
+            fontSize: 13,
+            lineHeight: 21,
+            textAlign: 'left',
+            top: 178 + 30,
+            left: 208 + 15 + 80 + 60,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -216,8 +257,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388+160+40,
-            left: 84,
-            textDecoration: 'line-through'
+            left: 84
           },
           {
             type: 'text',
@@ -236,8 +276,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84+120,
-            textDecoration: 'line-through'
+            left: 84+120
           },
           {
             type: 'text',
@@ -256,8 +295,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84 + 120+120,
-            textDecoration: 'line-through'
+            left: 84 + 120+120
           },
           {
             type: 'text',
@@ -276,8 +314,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84 + 120 + 120+120,
-            textDecoration: 'line-through'
+            left: 84 + 120 + 120+120
           },
           {
             type: 'text',
@@ -296,8 +333,7 @@ Page({
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
-            left: 84,
-            textDecoration: 'line-through'
+            left: 84
           },
           {
             type: 'image',

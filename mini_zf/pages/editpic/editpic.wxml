@@ -3,13 +3,13 @@
   <view class='image_container'>
     <image src="add_logo.png" class="tag" ></image>
     <view class='share-images' bindtap="editLogo">
-      <image src="add_logo.png" class='share-image{{logo==undefined?"1":""}}'></image>
+      <image src="add_logo.png" class='share-image{{logo==""?"1":""}}'></image>
       <image src="{{logo}}" class="share-image1"></image>
     </view>
     <view class='area_name'>
-      <text class='name' bindtap="editName" data-content='{{sale.name}}'>{{sale.name}}</text>
+      <text class='name' bindtap="editName" data-content='{{sale.name}}' data-name="name">{{sale.name==""?"点击修改":sale.name}}</text>
       <text class='name_tag'>售</text>
-      <text class='mony'>{{sale.mony}}</text>
+      <text class='mony' bindtap="editName" data-content='{{sale.mony}}' data-name="mony">{{sale.mony==""?"点击修改":sale.mony}}</text>
     </view>
     <view class='images'>
       <view class='touchWrap' style='transform: scale({{itemList[0].scale}});top:0px;left:0}px; '>
@@ -41,25 +41,25 @@
       <view class='des_half'>
         <view class='des'>
           <text class='name'>户型</text>
-          <text class='name'>{{sale.type}}</text>
+          <text class='name' bindtap="editName" data-content='{{sale.type}}' data-name="type">{{sale.type==""?"点击修改":sale.type}}</text>
         </view>
         <view class='des'>
           <text class='name'>面积</text>
-          <text class='name'>{{sale.size}}</text>
+          <text class='name'  bindtap="editName" data-content='{{sale.size}}' data-name="size">{{sale.size==""?"点击修改":sale.size}}</text>
         </view>
         <view class='des'>
           <text class='name'>楼层</text>
-          <text class='name'>{{sale.floor}}</text>
+          <text class='name'  bindtap="editName" data-content='{{sale.floor}}' data-name="floor">{{sale.floor==""?"点击修改":sale.floor}}</text>
         </view>
         <view class='des'>
           <text class='name'>装修</text>
-          <text class='name'>{{sale.situation}}</text>
+          <text class='name' bindtap="editName" data-content='{{sale.situation}}' data-name="situation">{{sale.situation==""?"点击修改":sale.situation}}</text>
         </view>
       </view>
       <view class='des_half'>
         <view class='des_v'>
           <text class='name'>其他说明：</text>
-          <text class='name'>{{sale.extra}}</text>
+          <text class='name' bindtap="editName" data-content='{{sale.extra}}' data-name="extra">{{sale.extra==""?"点击修改":sale.extra}}</text>
         </view>
       </view>
 
