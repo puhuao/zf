@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/land/land",
+   
     "pages/index/index",
     "pages/nd/nd",
     "pages/editpic/editpic",
@@ -9,7 +9,7 @@
     "pages/photo/photo",
     "pages/save/save",
     "pages/input/input",
-   
+    "pages/land/land",
     "pages/logos/logos",
     "pages/edit2pic/edit2pic",
     "pages/update/update"

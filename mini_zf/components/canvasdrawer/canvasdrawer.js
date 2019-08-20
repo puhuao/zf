@@ -168,6 +168,7 @@ Component({
       this.ctx.setTextAlign(textAlign)
       this.ctx.setFillStyle(color)
       this.ctx.setFontSize(fontSize)
+      this.ctx.font = "normal small-caps bold 16px/2 cursive"
 
       if (!breakWord) {
         this.ctx.fillText(content, left, top)
