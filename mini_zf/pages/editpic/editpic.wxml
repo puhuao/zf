@@ -1,7 +1,7 @@
 <!--pages/editpic/editpic.wxml-->
 <view class='page'>
   <view class='image_container'>
-    <image src="add_logo.png" class="tag" ></image>
+    <image src="add_logo.png" class="tag"></image>
     <view class='share-images' bindtap="editLogo">
       <image src="add_logo.png" class='share-image{{logo==""?"1":""}}'></image>
       <image src="{{logo}}" class="share-image1"></image>
@@ -45,11 +45,11 @@
         </view>
         <view class='des'>
           <text class='name'>面积</text>
-          <text class='name'  bindtap="editName" data-content='{{sale.size}}' data-name="size">{{sale.size==""?"点击修改":sale.size}}</text>
+          <text class='name' bindtap="editName" data-content='{{sale.size}}' data-name="size">{{sale.size==""?"点击修改":sale.size}}</text>
         </view>
         <view class='des'>
           <text class='name'>楼层</text>
-          <text class='name'  bindtap="editName" data-content='{{sale.floor}}' data-name="floor">{{sale.floor==""?"点击修改":sale.floor}}</text>
+          <text class='name' bindtap="editName" data-content='{{sale.floor}}' data-name="floor">{{sale.floor==""?"点击修改":sale.floor}}</text>
         </view>
         <view class='des'>
           <text class='name'>装修</text>
@@ -64,13 +64,23 @@
       </view>
 
     </view>
-  <canvasdrawer painting="{{painting}}" bind:getImage="eventGetImage"/>
+    <canvasdrawer painting="{{painting}}" bind:getImage="eventGetImage" />
   </view>
   <view class='button_area'>
     <button bindtap="chooseimage">照片切换</button>
     <button bindtap="changePage">页面切换</button>
   </view>
- <image src="{{shareImage}}" class="image_container"></image>
-  <button bind:tap="eventDraw">绘制</button>
-  <button bind:tap="eventSave">保存到本地</button>
+
+  <image src="{{shareImage}}" class="image_container"></image>
+  <button bind:tap="eventDraw">绘制模板1</button>
+  <button bind:tap="eventSave">保存模板1到本地</button>
+
+  <canvasdrawer painting="{{painting1}}" bind:getImage="eventGetImage1" />
+  <image src="{{shareImage1}}" class="image_container"></image>
+  <button bind:tap="eventDraw1">绘制模板2</button>
+  <button bind:tap="eventSave1">保存模板2到本地</button>
+  <canvasdrawer painting="{{painting2}}" bind:getImage="eventGetImage2" />
+  <image src="{{shareImage2}}" class="image_container"></image>
+  <button bind:tap="eventDraw2">绘制模板3</button>
+  <button bind:tap="eventSave2">保存模板3到本地</button>
 </view>
