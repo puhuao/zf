@@ -169,11 +169,19 @@ Page({
           },
           {
             type: 'text',
+            content: "房源编号："+sale.sort,
+            fontSize: 4,
+            textAlign: 'left',
+            top: 144+10,
+            left: 25
+          },
+          {
+            type: 'text',
             content: sale.name,
-            fontSize:36,
+            fontSize:18,
             color: '#E62004',
             textAlign: 'left',
-            top: 188,
+            top: 182,
             left: 128,
             width: 148,
             bolder: true
@@ -181,21 +189,21 @@ Page({
           {
             type: 'text',
             content: '售',
-            fontSize: 26,
+            fontSize: 13,
             color: '#E62004',
             textAlign: 'left',
-            top: 190+10,
+            top: 190+4,
             left: 128+80+80
           },
           {
             type: 'text',
             content: sale.mony,
-            fontSize: 40,
+            fontSize: 30,
             lineHeight: 21,
             color: '#E62004',
             textAlign: 'left',
-            top: 178,
-            left: 208+15+80,
+            top: 170,
+            left: 208+15+80+40,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -204,11 +212,11 @@ Page({
           {
             type: 'text',
             content: '万元',
-            fontSize: 13,
+            fontSize: 7,
             lineHeight: 21,
             textAlign: 'left',
             top: 178+15,
-            left: 208 + 15 + 80+60,
+            left: 208 + 15 + 80+60+80,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -217,12 +225,12 @@ Page({
           {
             type: 'text',
             content: '单价：',
-            fontSize: 13,
+            fontSize: 7,
             lineHeight: 21,
             textAlign: 'left',
             top: 178 + 30,
-            left: 208 + 15 + 80+60,
-            width: 287,
+            left: 208 + 15 + 80+60+80,
+            width: 42,
             MaxLineNumber: 2,
             breakWord: true,
             bolder: true
@@ -230,11 +238,11 @@ Page({
           {
             type: 'text',
             content: sale.monyPer+'元',
-            fontSize: 13,
+            fontSize: 7,
             lineHeight: 21,
             textAlign: 'left',
             top: 178 + 30,
-            left: 208 + 15 + 80 + 60,
+            left: 208 + 15 + 80 + 60+80+80,
             width: 287,
             MaxLineNumber: 2,
             breakWord: true,
@@ -243,7 +251,7 @@ Page({
           {
             type: 'text',
             content: '户型',
-            fontSize: 19,
+            fontSize: 10,
             color: '#E62004',
             textAlign: 'left',
             top: 388+160,
@@ -253,7 +261,7 @@ Page({
           {
             type: 'text',
             content: sale.type,
-            fontSize: 13,
+            fontSize: 7,
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388+160+40,
@@ -262,7 +270,7 @@ Page({
           {
             type: 'text',
             content: '面积',
-            fontSize: 19,
+            fontSize: 10,
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160,
@@ -272,7 +280,7 @@ Page({
           {
             type: 'text',
             content: sale.size,
-            fontSize: 13,
+            fontSize: 7,
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
@@ -281,7 +289,7 @@ Page({
           {
             type: 'text',
             content: '楼层',
-            fontSize: 19,
+            fontSize: 10,
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160,
@@ -291,7 +299,7 @@ Page({
           {
             type: 'text',
             content: sale.floor,
-            fontSize: 13,
+            fontSize: 7,
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
@@ -300,7 +308,7 @@ Page({
           {
             type: 'text',
             content: '装修',
-            fontSize: 19,
+            fontSize: 10,
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160,
@@ -310,7 +318,7 @@ Page({
           {
             type: 'text',
             content: sale.situation,
-            fontSize: 13,
+            fontSize: 7,
             color: '#7E7E8B',
             textAlign: 'left',
             top: 388 + 160 + 40,
@@ -319,7 +327,7 @@ Page({
           {
             type: 'text',
             content: '其他说明',
-            fontSize: 19,
+            fontSize: 10,
             color: '#E62004',
             textAlign: 'left',
             top: 388 + 160+40+40,
@@ -329,11 +337,11 @@ Page({
           {
             type: 'text',
             content: sale.extra,
-            fontSize: 13,
+            fontSize: 7,
             color: '#7E7E8B',
             textAlign: 'left',
-            top: 388 + 160 + 40,
-            left: 84
+            top: 388 + 160 + 40+40,
+            left: 84+80
           },
           {
             type: 'image',

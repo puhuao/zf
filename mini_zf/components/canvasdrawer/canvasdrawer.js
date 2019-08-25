@@ -160,7 +160,8 @@ Component({
         textAlign = 'left',
         width,
         bolder = false,
-        textDecoration = 'none'
+        textDecoration = 'none',
+        font = "cursive;"
       } = params
       
       this.ctx.beginPath()
@@ -168,7 +169,7 @@ Component({
       this.ctx.setTextAlign(textAlign)
       this.ctx.setFillStyle(color)
       this.ctx.setFontSize(fontSize)
-      this.ctx.font = "normal small-caps bold 16px/2 cursive"
+      this.ctx.font = "normal normal bold " + fontSize * 2 + "px " + font
 
       if (!breakWord) {
         this.ctx.fillText(content, left, top)
