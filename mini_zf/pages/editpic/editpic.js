@@ -169,7 +169,7 @@ Page({
           },
           {
             type: 'text',
-            content: "房源编号："+sale.sort,
+            content: "房源编号"+sale.sort,
             fontSize: 4,
             textAlign: 'left',
             top: 144+10,
