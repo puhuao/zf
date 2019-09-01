@@ -1,9 +1,9 @@
 {
   "pages": [
-   "pages/editpic/editpic",
+   
     "pages/index/index",
     "pages/nd/nd",
-    
+    "pages/editpic/editpic",
     "pages/drag/drag",
     "pages/logs/logs",
     "pages/photo/photo",
