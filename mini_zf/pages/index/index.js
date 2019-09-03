@@ -7,7 +7,8 @@ Page({
     motto: '欢迎使用珠峰房源海报助手',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    splashId:'cloud://zhufeng-lb3t8.7a68-zhufeng-lb3t8/advertising/splash.png'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -16,6 +17,20 @@ Page({
     })
   },
   onLoad: function () {
+    wx.cloud.getTempFileURL({
+      fileList: [splashId],
+      success: res => {
+        console.log(res.fileList)
+        app.globalData.logo = res.fileList[0].tempFileURL
+        console.log(app.globalData.logo)
+        var pages = getCurrentPages();//当前页面栈
+        console.log(res.fileList[0].tempFileURL)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
