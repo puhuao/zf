@@ -15,8 +15,8 @@ Page({
   nameInput: function (e) {
     app.globalData.logoNme = e.detail.value
   },
-  bindViewTap：function(){
-   
+  bindViewTap: function(){
+    
   },
   selectLogo: function (e) {
     var fileId = e.currentTarget.dataset.key;
