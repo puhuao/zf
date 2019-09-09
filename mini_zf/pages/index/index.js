@@ -17,11 +17,12 @@ Page({
     })
   },
   onLoad: function () {
+    var that = this;
     wx.cloud.getTempFileURL({
-      fileList: [splashId],
+      fileList: [that.data.splashId],
       success: res => {
         console.log(res.fileList)
-        app.globalData.logo = res.fileList[0].tempFileURL
+        // app.globalData.logo = res.fileList[0].tempFileURL
         console.log(app.globalData.logo)
         var pages = getCurrentPages();//当前页面栈
         console.log(res.fileList[0].tempFileURL)

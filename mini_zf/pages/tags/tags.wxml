@@ -1,0 +1,9 @@
+<!--pages/logos/logos.wxml-->
+<view class='page'>
+
+  <view wx:for="{{ne}}" bindtap="selectLogo" data-key='{{item.fileId}}'>
+    <view>{{item.fileId}}</view>
+    <view>{{item.name}}</view>
+  </view>
+</view>
+

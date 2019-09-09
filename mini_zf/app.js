@@ -79,6 +79,8 @@ App({
     sort: '',
     propertyYears: '',
     rentMony: '',
-    logo:''
+    logo:'',
+    tag:'',
+    logoNme:''
   }
 })

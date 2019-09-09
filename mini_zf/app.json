@@ -1,18 +1,19 @@
 {
   "pages": [
-   
+    "pages/logos/logos",
     "pages/index/index",
-    "pages/nd/nd",
     "pages/editpic/editpic",
+    "pages/nd/nd",
     "pages/drag/drag",
     "pages/logs/logs",
     "pages/photo/photo",
     "pages/save/save",
     "pages/input/input",
     "pages/land/land",
-    "pages/logos/logos",
+   
     "pages/edit2pic/edit2pic",
-    "pages/update/update"
+    "pages/update/update",
+    "pages/tags/tags"
   ],
   "tabBar": {
     "list": [

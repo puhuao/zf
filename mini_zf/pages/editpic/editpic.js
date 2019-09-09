@@ -2,7 +2,8 @@
 let index = 0,
   items = [],
   flag = true,
-  itemId = 1;
+  itemId = 1,
+temp='';
 var app = getApp()
 Page({
 
@@ -19,7 +20,8 @@ Page({
     painting1:{},
     shareImage1:'',
     painting2:{},
-    shareImage2:''
+    shareImage2:'',
+    tag:''
   },
 
   /**
@@ -70,6 +72,12 @@ Page({
     })
     console.log(app.globalData)
   },
+  editTag: function (e) {
+    wx.navigateTo({
+      url: '../tags/tags'
+    })
+    console.log(app.globalData)
+  },
   setDropItem(imgData) {
     let data = {},
       _this = this;
@@ -97,12 +105,23 @@ Page({
     for (let i = 0; i < items.length; i++) {
       items[i].active = false;
       if (e.currentTarget.dataset.id == items[i].id) {
+        if(temp==''){
+          items[i].active = true;
+          temp=items[i].image;
+        }else{
+          var t = items[i].image
+          items[i].image=temp;
+          items[index].image = t;
+          temp = '';
+        }
         index = i;
-        items[index].active = true;
       }
+      app.data.images[i] = items[i].image
     }
+   
     this.setData({
-      itemList: items
+      itemList: items,
+      images: app.data.images
     })
   },
   WraptouchMove: function (e) {
@@ -349,7 +368,7 @@ Page({
           },
           {
             type: 'image',
-            url: images[0],
+            url: app.globalData.tag,
             top: 674,
             left: 404,
             width: 244,

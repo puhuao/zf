@@ -1,7 +1,7 @@
 // pages/logos/logos.js
 wx.cloud.init();
 const db = wx.cloud.database({});
-const cont = db.collection('logos');
+const cont = db.collection('tags');
 var app = getApp()
 
 Page({
@@ -12,12 +12,6 @@ Page({
   data: {
     ne: [],
   },
-  nameInput: function (e) {
-    app.globalData.logoNme = e.detail.value
-  },
-  bindViewTap：function(){
-   
-  },
   selectLogo: function (e) {
     var fileId = e.currentTarget.dataset.key;
     console.log(fileId)
@@ -25,17 +19,17 @@ Page({
       fileList: [fileId],
       success: res => {
         console.log(res.fileList)
-        app.globalData.logo = res.fileList[0].tempFileURL
-        console.log(app.globalData.logo)
+        app.globalData.tag = res.fileList[0].tempFileURL
+        console.log(app.globalData.tag)
         var pages = getCurrentPages();//当前页面栈
         console.log(res.fileList[0].tempFileURL)
         if (pages.length > 1) {
 
           var beforePage = pages[pages.length - 2];//获取上一个页面实例对象
           beforePage.setData({
-            logo: res.fileList[0].tempFileURL
+            tag: res.fileList[0].tempFileURL
           });
-        
+
         }
         wx.navigateBack({ delta: 1 });
       },
@@ -55,7 +49,7 @@ Page({
       env: 'zhufeng-lb3t8'
     })
     //2、开始查询数据了  news对应的是集合的名称   
-    db.collection('logos').limit(100).get({
+    db.collection('tags').limit(100).get({
       //如果查询成功的话    
       success: res => {
         console.log(res.data)

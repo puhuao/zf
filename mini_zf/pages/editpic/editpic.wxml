@@ -1,7 +1,12 @@
 <!--pages/editpic/editpic.wxml-->
 <view class='page'>
   <view class='image_container'>
-    <image src="add_logo.png" class="tag"></image>
+    
+    <view class='tag1' bindtap="editTag">
+      <image src="add_logo.png" class='tag{{tag==""?"1":""}}'></image>
+      <image src="{{tag}}" class="tag1"></image>
+    </view>
+
     <view class='share-images' bindtap="editLogo">
       <image src="add_logo.png" class='share-image{{logo==""?"1":""}}'></image>
       <image src="{{logo}}" class="share-image1"></image>

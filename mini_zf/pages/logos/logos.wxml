@@ -1,10 +1,14 @@
 <!--pages/logos/logos.wxml-->
-<view  wx:for="{{ne}}" bindtap="selectLogo" data-key='{{item.name}}'><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
-    <!--index为每个数据对应的下标-->
-    <view >序号：{{index+1}}</view>
-    <!--item就相当于数组名+下标的结合体，适用于调用数组所有数据-->
+<view class='page'>
+  <view class="logos-input">
+    <view>没有logo请输入名称</view>
+    <input bindinput="nameInput" placeholder="请输入logo名称" auto-focus class='logos-item' />
+  </view>
+  <view class="submit">
+    <button bindtap="bindViewTap">查找</button>
+  </view>
+  <view wx:for="{{ne}}" bindtap="selectLogo" data-key='{{item.name}}' class='logos-list'>
     <view>{{item.fileId}}</view>
-    <view >{{item.name}}</view>
+    <view>{{item.name}}</view>
+  </view>
 </view>
-
-
